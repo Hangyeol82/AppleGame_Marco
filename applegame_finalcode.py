@@ -114,7 +114,6 @@ def hori(x,y):
                 if apple_map[x][j].num != 0:
                     score+=1
                 apple_map[x][j].num = 0
-            print(apple_map[x][y].num, apple_map[x][i].num)
             return
 
 def vert(x,y):
@@ -130,7 +129,6 @@ def vert(x,y):
                 if apple_map[j][y].num != 0:
                     score+=1
                 apple_map[j][y].num = 0
-            print(apple_map[x][y].num, apple_map[x][i].num)
             return
 
 def is_vert(x,y):
