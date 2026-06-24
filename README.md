@@ -32,36 +32,6 @@
 - **PyAutoGUI** (스크린 이미지 인식 & 마우스 자동화)
 - **scipy.spatial.distance** (중복된 이미지 제거)
 
----
-
-## **RL Simulator**
-
-- `applegame/board.py`: board state and rectangle logic
-- `applegame/action_map.py`: rectangle action indexing
-- `applegame/env.py`: Gymnasium environment with action masking
-- `train.py`: MaskablePPO training entrypoint
-
----
-
-## **Quick Start**
-
-1. Install deps:
-   ```bash
-   pip install numpy gymnasium stable-baselines3 sb3-contrib pyautogui scipy opencv-python
-   ```
-
-2. Run automation:
-   ```bash
-   python applegame_finalcode.py
-   ```
-
-3. Train RL simulator:
-   ```bash
-   python train.py
-   ```
-
----
-
 ## **해상도 및 디스플레이 설정 주의사항**
 
 이 프로그램은 **PyAutoGUI**를 사용하여 화면에서 특정 숫자 이미지를 감지합니다.  
