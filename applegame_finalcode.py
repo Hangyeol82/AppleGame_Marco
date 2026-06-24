@@ -1,5 +1,6 @@
 import pyautogui
 import time
+from pathlib import Path
 from scipy.spatial import distance
 
 pyautogui.useImageNotFoundException(False)  # 에러 방지
@@ -7,6 +8,7 @@ pyautogui.FAILSAFE = False  # 마우스 좌표 제한 해제
 
 N = 10
 M = 17
+BASE_DIR = Path(__file__).resolve().parent
 
 
 class Apple:
@@ -18,17 +20,10 @@ class Apple:
     def getCoordinate(self):
         return (self.x, self.y)
 
-# 숫자 이미지 파일 (1~5) 저장된 경로
+# 숫자 이미지 파일 저장된 경로
 numbers = {
-    1: "1.png",
-    2: "2.png",
-    3: "3.png",
-    4: "4.png",
-    5: "5.png",
-    6: "6.png",
-    7: "7.png",
-    8: "8.png",
-    9: "9.png",
+    num: BASE_DIR / f"{num}.png"
+    for num in range(1, 10)
 }
 
 # 인식 전 대기 (3초)
@@ -38,8 +33,8 @@ apple_list = []
 threshold = 10  # 중복을 판별할 거리 기준 (픽셀 단위, 조정 가능)
 
 # 1️⃣ 화면에서 숫자 이미지 찾기
-for num in range(1,10):
-    positions = list(pyautogui.locateAllOnScreen("%d.png" % num, confidence=0.95))
+for num, image_path in numbers.items():
+    positions = list(pyautogui.locateAllOnScreen(str(image_path), confidence=0.95))
 
     for pos in positions:
         center_x = pos.left + pos.width // 2
@@ -68,6 +63,10 @@ for apple in filtered_apples:
     print(f"숫자 {apple.num}: ({apple.x}, {apple.y})")
 
 print(f"\n최종 검출된 숫자 개수: {len(filtered_apples)}")
+
+if len(filtered_apples) != N * M:
+    print(f"Error: Detected {len(filtered_apples)} apples, expected {N*M}. Check screen or image matching.")
+    exit()
 
 apple_map = [[] * 17 for _ in range(10)]
 
