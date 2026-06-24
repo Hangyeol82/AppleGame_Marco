@@ -10,9 +10,9 @@
 
 ## **Demo**
 
-<video src="./assets/applegame-demo-small.mp4" controls width="720"></video>
+![AppleGame automation demo](./assets/applegame-demo-preview.gif)
 
-[데모 영상 보기](./assets/applegame-demo-small.mp4)
+[전체 데모 영상 보기](https://raw.githubusercontent.com/Hangyeol82/AppleGame_Marco/main/assets/applegame-demo-small.mp4)
 
 ---
 
