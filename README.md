@@ -10,7 +10,7 @@
 
 ## **Demo**
 
-![AppleGame automation demo](./assets/applegame-demo-preview.gif)
+![AppleGame automation demo](./assets/applegame-demo-preview-mid.gif)
 
 [전체 데모 영상 보기](https://raw.githubusercontent.com/Hangyeol82/AppleGame_Marco/main/assets/applegame-demo-small.mp4)
 
