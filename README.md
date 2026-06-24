@@ -10,9 +10,9 @@
 
 ## **Demo**
 
-<video src="./assets/applegame-demo.mov" controls width="720"></video>
+<video src="./assets/applegame-demo-small.mp4" controls width="720"></video>
 
-[데모 영상 보기](./assets/applegame-demo.mov)
+[데모 영상 보기](./assets/applegame-demo-small.mp4)
 
 ---
 
